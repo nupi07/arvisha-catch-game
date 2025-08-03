@@ -29,9 +29,45 @@
       display: none;
       z-index: 10;
     }
-  </style>
+ <style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #87CEEB;
+    height: 100%;
+    width: 100%;
+    touch-action: none;
+  }
+
 </head>
 <body>
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  canvas {
+    background: #fff;
+    width: 720px;
+    height: 1280px;
+    image-rendering: pixelated;
+  }
+
+  #game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    background: rgba(255,255,255,0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    z-index: 10;
+  }
+</style>
 <canvas id="gameCanvas" width="720" height="1280"></canvas>
 <div id="game-over">Game Over! Refresh to Play Again</div>
 
@@ -186,3 +222,4 @@ function update() {
 </body>
 
 </html>
+
